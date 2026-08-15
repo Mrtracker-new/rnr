@@ -6,6 +6,8 @@ import sortifyImg from '../assets/images/Sortify.avif';
 import ytDownloaderImg from '../assets/images/YT.avif';
 import linkNestImg from '../assets/images/LN.avif';
 import contactManagerImg from '../assets/images/Contact_Manager.avif';
+import netPlusImg from '../assets/images/NetPlus.avif';
+import ytDownloaderDesktopImg from '../assets/images/YT_Downloader.avif';
 
 export interface Project {
   id: number;
@@ -228,6 +230,45 @@ export const projectsData: Project[] = [
     icon: '🔥',
     bgColor: '#000000',
     image: barWebImg,
+  },
+  {
+    id: 11,
+    title: 'NetPlus',
+    category: 'Desktop Application',
+    description: 'Local-first network observability platform built with Rust, React, and Tauri for packet decoding, flow reconstruction, protocol exploration, and security analysis with PCAP/PCAPNG processing at its core.',
+    longDescription: 'NetPlus (NetPulse) is a beginner-friendly, production-grade Internet observability platform built in Rust and React/Tauri. Reconstructs and visualizes network events on your computer locally and privately.\n\nInstead of presenting raw packet bytes first, NetPlus delivers structured network flow narratives and calibrated confidence scoring, keeping deep technical inspection one click away.\n\nArchitected as a multi-crate Rust workspace (netpulse-engine, netpulse-decode, netpulse-flow, netpulse-storage) paired with a React/Tauri desktop interface.',
+    caseStudy: {
+      problem: 'Traditional packet analyzers present overwhelming raw hex streams without context, while commercial monitoring tools stream user telemetry to third-party cloud servers.',
+      solution: 'Built a local-first network observability platform with Rust, React, and Tauri for packet decoding, flow reconstruction, protocol exploration, and security analysis, with PCAP/PCAPNG processing and offline-first analysis at its core.',
+      impact: 'Established a multi-crate Rust workspace spanning packet capture, decoding, flow reconstruction, storage, intelligence, API contracts, and a React/Tauri desktop interface, with strong local-first privacy boundaries and deterministic test/replay infrastructure.',
+      learnings: 'Designing process-isolated multi-crate Rust architectures with Tauri v2 IPC required enforcing strict API boundaries. Balancing real-time packet processing throughput against UI re-render frequency highlighted the importance of batched state updates and IPC backpressure.',
+    },
+    technologies: ['Rust', 'Tauri', 'React', 'TypeScript', 'SQLite', 'PCAP'],
+    github: 'https://github.com/Mrtracker-new/NetPlus',
+    featured: true,
+    icon: '📡',
+    bgColor: '#0a0f1e',
+    image: netPlusImg,
+  },
+  {
+    id: 12,
+    title: 'YT Downloader — Desktop',
+    category: 'Desktop Application',
+    description: 'Native desktop media downloader built with Rust, Tauri, and React. Supports up to 8K video, multiple audio formats, playlists, subtitles, SponsorBlock, and concurrent downloads.',
+    longDescription: 'YT Downloader is a native desktop application for grabbing video and audio from YouTube, Vimeo, SoundCloud, and other supported platforms. Built with Rust and Tauri v2 on the backend and React on the frontend.\n\nFeatures include up to 8K resolution video, codec selection (H.264, VP9, AV1), lossy/lossless audio extraction (MP3, FLAC, WAV, Opus), playlist batch processing, thumbnail metadata embedding, custom SponsorBlock segment filtering, and cookie borrowing for gated content.\n\nShips as a standalone Windows installer (.exe) with automatic local setup of yt-dlp and FFmpeg binaries.',
+    caseStudy: {
+      problem: 'Web-based media downloaders are plagued with intrusive advertisements, rate limits, quality degradation, and privacy risks from tracking user media URLs.',
+      solution: 'Built a native desktop application using Rust and Tauri v2 that manages yt-dlp and FFmpeg child processes to download up to 8K video and audio directly to local disk with per-job quality, codec, thumbnail embedding, and SponsorBlock options.',
+      impact: 'Released a packaged Windows installer featuring automated prerequisite setup, multi-format conversion, concurrent download queueing, and SponsorBlock integration.',
+      learnings: 'Managing asynchronous child process execution for yt-dlp and FFmpeg in Rust required implementing strict process lifecycle cleanup. Implementing async IPC progress events prevented UI locking during long FFmpeg file-stitching operations.',
+    },
+    technologies: ['Rust', 'Tauri', 'React', 'TypeScript', 'yt-dlp', 'FFmpeg'],
+    github: 'https://github.com/Mrtracker-new/YT_Download',
+    download: 'https://github.com/Mrtracker-new/YT_Download/releases/',
+    featured: true,
+    icon: '🎬',
+    bgColor: '#000000',
+    image: ytDownloaderDesktopImg,
   },
 ];
 

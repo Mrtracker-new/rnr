@@ -68,8 +68,8 @@ const Projects: React.FC = () => {
     <>
       <SEO
         title="My Work — Rolan Lobo"
-        description="Real problems, real solutions. Encryption tools, zero-knowledge platforms, offline-first mobile apps, and computer vision experiments — with case studies for each."
-        keywords="Steganography, AES-256 Encryption, File Encryption, InvisioVault, BAR, Sortify, CursorCam, React, Python, Flask, Privacy Software, Open Source, Rolan Lobo"
+        description="Real problems, real solutions. Encryption tools, zero-knowledge platforms, local-first network observability, desktop media utilities, and mobile apps — with case studies for each."
+        keywords="Steganography, AES-256 Encryption, NetPlus, NetPulse, YT Downloader, Rust, Tauri, InvisioVault, BAR, Sortify, React, Python, Privacy Software, Rolan Lobo"
         url="https://rolan-rnr.netlify.app/projects"
       />
 
